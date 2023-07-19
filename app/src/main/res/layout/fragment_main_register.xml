@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".BasicFragments.MainRegister">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_margin="@dimen/_15sdp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_25sdp"
+            android:src="@drawable/secondory_logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:textSize="@dimen/_14sdp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/popins_extra_bold"
+            android:text="Lets Get Started"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/grey"
+            android:text="Create New Account"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etFullnameRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:textColor="@color/grey"
+            android:inputType="textPersonName"
+            android:hint="Full Name"
+            style="@style/MyTextInputLayout"
+            android:background="@drawable/et_bg_basic"
+            android:padding="@dimen/_10sdp"
+
+            android:drawablePadding="@dimen/_8sdp"
+            android:drawableStart="@drawable/full_name_icon"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etMailRegsiter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:textColor="@color/grey"
+
+            android:inputType="textEmailAddress"
+            android:hint="Your Email"
+            style="@style/MyTextInputLayout"
+            android:background="@drawable/et_bg_basic"
+            android:padding="@dimen/_10sdp"
+            android:drawablePadding="@dimen/_8sdp"
+            android:drawableStart="@drawable/email_et_icon"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etFullnameRegister" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/etPassRegisterLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            style="@style/MyTextInputLayout"
+
+            app:layout_constraintTop_toBottomOf="@+id/etMailRegsiter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:hintAnimationEnabled="false"
+            app:passwordToggleTint="@color/grey"
+            app:hintEnabled="false"
+            app:boxBackgroundMode="none"
+            app:passwordToggleEnabled="true"
+            android:layout_marginTop="@dimen/_12sdp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etPassRegister"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:hint="Password"
+                android:textColor="@color/primary_blue"
+                android:textColorHint="@color/grey"
+                android:background="@drawable/et_bg_basic"
+                android:padding="@dimen/_10sdp"
+                android:drawablePadding="@dimen/_8sdp"
+                android:drawableStart="@drawable/pass_et_icon"
+                android:textSize="16sp"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/etConfrimPassRegisterLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            style="@style/MyTextInputLayout"
+            app:layout_constraintTop_toBottomOf="@+id/etPassRegisterLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:hintAnimationEnabled="false"
+            app:boxBackgroundMode="none"
+            app:hintEnabled="false"
+            app:passwordToggleTint="@color/grey"
+
+            app:passwordToggleEnabled="true"
+            android:layout_marginTop="@dimen/_12sdp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etConfrimPassRegister"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:hint="Confrim Password"
+                android:textColor="@color/grey"
+                android:textColorHint="@color/grey"
+                android:background="@drawable/et_bg_basic"
+                android:padding="@dimen/_10sdp"
+                android:drawablePadding="@dimen/_8sdp"
+                android:drawableStart="@drawable/pass_et_icon"
+                android:textSize="16sp"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/mainRegisterBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_bg_main"
+            android:foreground="?attr/selectableItemBackground"
+            android:text="Sign Up"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:layout_marginTop="@dimen/_12sdp"
+
+            app:backgroundTint="@null"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etConfrimPassRegisterLayout" />
+
+
+
+
+        <LinearLayout
+            android:id="@+id/navigateToLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mainRegisterBtn">
+
+            <TextView
+                android:id="@+id/tvAlreadyAccount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Already have an Account?"
+                android:layout_marginEnd="@dimen/_2sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:textColor="@color/grey"
+                android:textSize="@dimen/_12sdp" />
+            <TextView
+                android:id="@+id/tvLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:fontFamily="@font/poppins_semibold"
+                android:text="login?"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:textColor="@color/primary_blue"
+                android:textSize="@dimen/_12sdp" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
